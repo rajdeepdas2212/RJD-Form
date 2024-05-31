@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<style type="text/css">
+		body{
+			background-color: #ffffffda;
+		}
+		h2{
+			color: #2a3f54;
+			background-color: rgba(119, 99, 99, 0.059);
+			text-align: center;
+			font-size: 35px;
+		}
+		.view{
+			color: #2A3F54;
+			font-size: 20px;
+		}
+		h4{
+			color: #f0f8ff;
+			background: #3D5368;
+			border: 10px;
+			border-style: solid;
+			border-color: #3D5368;
+		}
+		label{
+			color: #162e46;
+			display: inline-block;
+			font-weight:bold ;
+		}
+		.button{
+			text-align: center;
+			color: #fff;
+			background-color: #000000;
+			font-size: 15px;
+			width: 80px;
+			height: 30px;
+		}
+		.button:hover{
+			text-align: center;
+			color: #fff;
+			background-color: #000000;
+			font-size: 17.5px;
+			width: 80px;
+			height: 30px;
+		}
+		/*input{
+			width: 100%;
+			display: inline-block;
+		}*/
+	</style>
+	<script>
+		function cal()
+		{
+			var marks = parseInt(document.getElementById('marks').value);
+			var percentage = document.getElementById('percentage').value = (marks*1000)/500;
+		}
+	</script>
+</head>
+<body>
+	<h2>Swami Vivekananda Merit-cum-Means Scholarship</h2>
+	<fieldset>
+	<div class="view">View Application</div>
+	<hr>
+	<div class="basic">
+	<h4>Basic details</h4>
+		<table cellpadding="" cellspacing="20">
+			<tr>
+				<td><label>Applicant Registration No.</label></td>
+				<td><input type="text" name="Registration No"></td>
+				<td><label>Applicant Name</label></td>
+				<td><input type="text" name="Applicant Name"></td>
+			</tr>
+			<tr>
+				<td><label>Mobile No.</label></td>
+				<td><input type="number" name="telephone"></td>
+				<td><label>Email</label></td>
+				<td><input type="mail" name="Email"></td>
+			</tr>
+			<tr  class="row">
+				<td><label>Roll Number of 10th standard Board/</br> Council Examination or Equivalent</label></td>
+				<td><input type="text" name="Registration No"></td>
+				<td><label>Year of 10th standard Board/<br> Council Examination or Equivalent</label></td>
+				<td><input type="number" name="Examination" min="2020" max="2024"></td>
+			</tr>
+			<tr>
+				<td><label>Ration Card No/ Khadysathi ID</label></td>
+				<td>
+					<input type="text" list="y/n">
+					<datalist id="y/n">
+						<option value="Yes"></option>
+						<option value="No"></option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" width="10%"><h4>Details of the qualifying public examination, eligible for scholarship (Last Board/Council/University
+					examination passed)</h4></td>
+			</tr>
+			<tr>
+				<td><label>Name of the examination</label></td>
+				<td><input type="text" name="examination"></td>
+				<td><label>Year of the examination conducted by Board/<br>Council/University</label></td>
+				<td><input type="number" name="examination" min="2020" max="2024"></td>
+			</tr>
+			<tr>
+				<td><label>Name of the Board/Council/University</label></td>
+				<td><input type="text" name="Board"></td>
+				<td><label>Roll No. of the Board/Council/University Exam</label></td>
+				<td><input type="number" name="Roll No"></td>
+			</tr>
+			<tr>
+				<td><label>Total marks obtained(Excluding<br> additional or optional marks)</label></td>
+				<td><input type="number" onkeypress="cal()" name="marks" id="marks"></td>
+				<td><label>Out of</label></td>
+				<td><input type="number" name="marks" value="500" disabled></td>
+			</tr>
+			<tr>
+				<td><label>Overall percentage obtained:(%)</label></td>
+				<td><input type="number" name="percentage" id="percentage" disabled></td>
+			</tr>
+			<tr>
+				<td colspan="4" width="18%"><h4>Present course of study</h4></td>
+			</tr>
+			<tr>
+				<td><label>Name of the course</label></td>
+				<td>
+					<input type="text" list="course">
+					<datalist id="course">
+						<option value="BCA"></option>
+						<option value="BBA"></option>
+						<option value="BBA(BA)"></option>
+						<option value="BTech"></option>
+					</datalist>
+				</td>
+				<td><label>Discipline of course</label></td>
+				<td>
+					<input type="text" list="course">
+					<datalist id="course">
+						<option value="BCA"></option>
+						<option value="BBA"></option>
+						<option value="BBA(BA)"></option>
+						<option value="BTech"></option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Discipline of course</label></td>
+				<td><input type="number" name="course" min="3" max="4"></td>
+				<td><label>Date of admission in this course</label></td>
+				<td><input type="date" name="dt"></td>
+			</tr>
+			<tr>
+				<td><label>Name of the present Institution</label></td>
+				<td><input type="text" name="institute"></td>
+				<td><label>District</label></td>
+				<td>
+					<input type="text" list="Districts">
+					<datalist id="Districts">
+						<option value="Alipurduar"></option>
+						<option value="Bankura"></option>
+						<option value="Cooch Behar"></option>
+						<option value="South Dinajpur"></option>
+						<option value="Darjeeling"></option>
+						<option value="Hooghly"></option>
+						<option value="Howrah"></option>
+						<option value="Jalpaiguri"></option>
+						<option value="Jhargram"></option>
+						<option value="Kalimpong"></option>
+						<option value="Kolkata"></option>
+						<option value="Malda"></option>
+						<option value="Murshidabad"></option>
+						<option value="Nadia"></option>
+						<option value="North 24 Parganas"></option>
+						<option value="Paschim Bardhaman"></option>
+						<option value="Purba Bardhaman"></option>
+						<option value="Purulia"></option>
+						<option value="South 24 Parganas"></option>
+						<option value="North Dinajpur"></option>
+						<option value="West Burdwan"></option>
+						<option value="West Medinipur"></option>
+					</datalist>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="Personal">
+	<h4>Personal Details</h4>
+		<table cellpadding="" cellspacing="20">
+			<tr>
+				<td><label>Name of Father</label></td>
+				<td><input type="text" name="name"></td>
+				<td><label>Name of Mother</label></td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td><label>Profession of Father</label></td>
+				<td><input type="text" name="Profession"></td>
+				<td><label>Name of Guardian</label></td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td><label>Relation with Gurdian</label></td>
+				<td><input type="text" name="Guardian"></td>
+				<td><label>Religion</label></td>
+				<td><input type="text" name="Religion"></td>
+			</tr>
+			<tr>
+				<td><label>Date of Birth</label></td>
+				<td><input type="date" name="dob"></td>
+				<td><label>Sex</label></td>
+				<td>
+					<input type="text" list="sex">
+					<datalist id="sex">
+						<option value="Male"></option>
+						<option value="Female"></option>
+						<option value="Others"></option>
+					</datalist>
+				</td>
+			</tr>
+			<tr> 
+				<td><label>Caste</label></td>
+				<td>
+					<input type="text" list="caste">
+					<datalist id="caste">
+						<option value="General"></option>
+						<option value="SC"></option>
+						<option value="ST"></option>
+						<option value="OBC"></option>
+					</datalist>
+				</td>
+				<td><label>Any Linguistic/Religious minority Community</label></td>
+				<td>
+					<input type="text" list="y/n">
+					<datalist id="y/n">
+						<option value="Yes"></option>
+						<option value="No"></option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Whether Differently Able</label></td>
+				<td>
+					<input type="text" list="y/n">
+					<datalist id="y/n">
+						<option value="Yes"></option>
+						<option value="No"></option>
+					</datalist>
+				</td>
+				<td><label>Percentage of Disability(%)</label></td>
+				<td><input type="number" name="percentage"></td>
+			</tr>
+			<tr>
+				<td><label>Whether the applicant is domiciled in West <br> Bengal</label></td>
+				<td>
+					<input type="text" list="y/n">
+					<datalist id="y/n">
+						<option value="Yes"></option>
+						<option value="No"></option>
+					</datalist>
+				</td>
+				<td><label>Aadhaar No.</label></td>
+				<td><input type="number" name="Aadhaar No"></td>
+			</tr>
+			<tr>
+				<td colspan="4" width="10%"><h4>Present Family address</h4></td>
+			</tr>
+			<tr>
+				<td><label>House No</label></td>
+				<td><input type="text" name="House No"></td>
+				<td><label>Street Name</label></td>
+				<td><input type="text" name="Street Name"></td>
+			</tr>
+			<tr>
+				<td><label>Town/Village</label></td>
+				<td><input type="text" name="Town/Village"></td>
+				<td><label>Post Office</label></td>
+				<td><input type="text" name="Post Office"></td>
+			</tr>
+			<tr>
+				<td><label>PIN Code</label></td>
+				<td><input type="number" name="PIN Code"></td>
+				<td><label>District</label></td>
+				<td>
+					<input type="text" list="Districts">
+					<datalist id="Districts">
+						<option value="Alipurduar"></option>
+						<option value="Bankura"></option>
+						<option value="Cooch Behar"></option>
+						<option value="South Dinajpur"></option>
+						<option value="Darjeeling"></option>
+						<option value="Hooghly"></option>
+						<option value="Howrah"></option>
+						<option value="Jalpaiguri"></option>
+						<option value="Jhargram"></option>
+						<option value="Kalimpong"></option>
+						<option value="Kolkata"></option>
+						<option value="Malda"></option>
+						<option value="Murshidabad"></option>
+						<option value="Nadia"></option>
+						<option value="North 24 Parganas"></option>
+						<option value="Paschim Bardhaman"></option>
+						<option value="Purba Bardhaman"></option>
+						<option value="Purulia"></option>
+						<option value="South 24 Parganas"></option>
+						<option value="North Dinajpur"></option>
+						<option value="West Burdwan"></option>
+						<option value="West Medinipur"></option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label>State</label></td>
+				<td>
+					<input type="text" list="state">
+					<datalist id="state">
+						<option value="Andhra Pradesh"></option>
+						<option value="Arunachal Pradesh"></option>
+						<option value="Assam"></option>
+						<option value="Bihar"></option>
+						<option value="Chhattisgar"></option>
+						<option value="Goa"></option>
+						<option value="Gujarat"></option>
+						<option value="Haryana"></option>
+						<option value="Himachal Pradesh"></option>
+						<option value="Jharkhand"></option>
+						<option value="Karnataka"></option>
+						<option value="Kerala"></option>
+						<option value="Madhya Pradesh"></option>
+						<option value="Maharashtra"></option>
+						<option value="Manipur"></option>
+						<option value="Meghalaya"></option>
+						<option value="Mizoram"></option>
+						<option value="Nagaland"></option>
+						<option value="Odisha"></option>
+						<option value="Punjab"></option>
+						<option value="Rajasthan"></option>
+						<option value="Sikkim"></option>
+						<option value="Tamil Nadu"></option>
+						<option value="Telangana"></option>
+						<option value="Tripura"></option>
+						<option value="Uttarakhand"></option>
+						<option value="Uttar Pradesh"></option>
+						<option value="WEST BENGAL"></option>
+					</datalist>
+				</td>
+				
+			</tr>
+			<tr>
+				<td><label>Whether the applicant is in receipt of any other <br>State/Central Government scholarship/stipend for the<br?present course</label></td>
+				<td>
+					<input type="text" list="y/n">
+					<datalist id="y/n">
+						<option value="Yes"></option>
+						<option value="No"></option>
+					</datalist>
+				</td>
+				<td><label>Name of the Scholarship</label></td>
+				<td>
+					<input type="text" list="Name of the Scholarship">
+					<datalist id="Name of the Scholarship">
+						<option value="SVMCM"></option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Whether the applicant has been nominated/has receive <br> any other State/Central Government scholarship for the<br> present course of study</label></td>
+				<td>
+					<input type="text" list="y/n">
+					<datalist id="y/n">
+						<option value="Yes"></option>
+						<option value="No"></option>
+					</datalist>
+				</td>
+				<td><label>Name of the Scholarship</label></td>
+				<td>
+					<input type="text" list="Name of the Scholarship">
+					<datalist id="Name of the Scholarship">
+						<option value="SVMCM"></option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Total income of family, in rupees, from all sources for <br> the period from 1st April 2023 to 31th March 2024</label></td>
+				<td><input type="number" name="income"></td>
+			</tr>
+			<tr>
+				<td colspan="4" width="10%"><h4>Bank details(Major A/C in the name of the Beneficiary concerned)</h4></td>
+			</tr>
+			<tr>
+				<td><label>Name of Bank</label></td>
+				<td>
+					<input list="bank">
+					<datalist id="bank">
+						<option value="HDFC Bank"></option>
+						<option value="State Bank of India (SBI)"></option>
+						<option value="ICICI Bank"></option>
+						<option value="Axis National Bank"></option>
+						<option value="Kotak Mahindra Bank"></option>
+						<option value="IndusInd Bank"></option>
+						<option value="Yes Bank"></option>
+						<option value="Punjab National Bank"></option>
+						<option value="Bank of Baroda"></option>
+						<option value="Bank of India"></option>
+					</datalist>
+				</td>
+				<td><label>A/C No,</label></td>
+				<td><input type="number" name="ac number"></td>
+			</tr>
+			<tr>
+				<td><label>IFSC Code</label></td>
+				<td><input type="text" name="IFSC Code"></td>
+				<td><label>Branch Name</label></td>
+				<td><input type="text" name="Branch Name"></td>
+			</tr>
+			<tr>
+				<td><label>Branch code</label></td>
+				<td><input type="number" name="Branch code"></td>
+				<td><label>MICR Code</label></td>
+				<td><input type="number" name="MICR Code"></td>
+			</tr>
+		</table>
+		</div>
+		<div class="Documents">
+		<h4>Upload Documents</h4>
+		<table cellpadding="" cellspacing="20" width="100%">
+			<tr>
+				<td><label>Mark sheet of Madhyamik Examination or its <br> equivalent(Both sides)</label></td>
+				<td><input type="file" name="pdf"></td>
+				<td><label>Mark sheet of last Board/Council/University/College  <br> Examination</label></td>
+				<td><input type="file" name="pdf"></td>
+			</tr>
+			<tr>
+				<td><label>Admission Receipt</label></td>
+				<td><input type="file" name="pdf"></td>
+			</tr>
+			<tr>
+				<td><label>Income Certificate of Family <br> ( Issuing Authority : Execuive officer in case of <br> municipality )</label></td>
+				<td><input type="file" name="pdf"></td>
+				<td><label>Domiciliary certificate as Aadhaar ID/Voter ID/Ration <br> card/Certificate Issued by concerned authority</label></td>
+				<td><input type="file" name="pdf"></td>
+			</tr>
+			<tr>
+				<td><label>Scan copy of Bank Passbook (1st Page containing A/C <br> number, IFSC and Beneficiary Name)</label></td>
+				<td><input type="file" name="pdf"></td>
+			</tr>
+		</table>
+		</div>
+	</fieldset>
+	<center>
+	<input type="button" value="Submit" name="Submit" id="Submit" class="button">
+	<input type="button" value="Reset" name="Reset" id="Reset" class="button">
+ 	</center>
+</body>
+</html>
